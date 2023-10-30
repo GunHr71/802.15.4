@@ -1,0 +1,17 @@
+framework/NVM/Source/NV_FsciCommands.o \
+ framework/NVM/Source/NV_FsciCommands.d: \
+ ../framework/NVM/Source/NV_FsciCommands.c \
+ D:/Proyects/REDES191023/frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos/source/app_preinclude.h \
+ D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\common/EmbeddedTypes.h \
+ D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\Messaging\Interface/Messaging.h \
+ D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\Lists/GenericList.h \
+ D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\MemManager\Interface/MemManager.h \
+ D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\FunctionLib/FunctionLib.h \
+ D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\NVM\Interface/NVM_Interface.h
+D:/Proyects/REDES191023/frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos/source/app_preinclude.h:
+D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\common/EmbeddedTypes.h:
+D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\Messaging\Interface/Messaging.h:
+D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\Lists/GenericList.h:
+D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\MemManager\Interface/MemManager.h:
+D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\FunctionLib/FunctionLib.h:
+D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\NVM\Interface/NVM_Interface.h:

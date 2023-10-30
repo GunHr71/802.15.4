@@ -1,0 +1,12 @@
+framework/Panic/Source/Panic.o framework/Panic/Source/Panic.d: \
+ ../framework/Panic/Source/Panic.c \
+ D:/Proyects/REDES191023/frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos/source/app_preinclude.h \
+ D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos\framework\Panic\Interface/Panic.h \
+ D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos\framework\common/EmbeddedTypes.h \
+ D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos\framework\OSAbstraction\Interface/fsl_os_abstraction.h \
+ D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos\framework\OSAbstraction\Interface/fsl_os_abstraction_config.h
+D:/Proyects/REDES191023/frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos/source/app_preinclude.h:
+D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos\framework\Panic\Interface/Panic.h:
+D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos\framework\common/EmbeddedTypes.h:
+D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos\framework\OSAbstraction\Interface/fsl_os_abstraction.h:
+D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos\framework\OSAbstraction\Interface/fsl_os_abstraction_config.h:

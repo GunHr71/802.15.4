@@ -87,6 +87,7 @@ uint8_t      gpioPin;
 #define STANDARD_TEMP                 (25)
 #define mNoOfPinsDisabledInLowPower_c (19)
 
+
 /************************************************************************************
 *************************************************************************************
 * Private memory declarations

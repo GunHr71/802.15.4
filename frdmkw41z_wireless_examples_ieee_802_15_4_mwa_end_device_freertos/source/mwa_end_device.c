@@ -28,7 +28,9 @@
 #include "TimersManager.h"
 #include "FunctionLib.h"
 #include "MyNewTask.h"
-
+#include "board.h"
+#include "fsl_port.h"
+#include "pin_mux.h"
 #if mEnterLowPowerWhenIdle_c
   #include "PWR_Interface.h"
 #endif
@@ -58,6 +60,13 @@
 
 #define mAppStackSize_c 700
 #define mAppTaskPrio_c  4
+
+#define BOARD_SW_GPIO BOARD_SW3_GPIO
+#define BOARD_SW_PORT BOARD_SW3_PORT
+#define BOARD_SW_GPIO_PIN BOARD_SW3_GPIO_PIN
+#define BOARD_SW_IRQ BOARD_SW3_IRQ
+#define BOARD_SW_IRQ_HANDLER BOARD_SW3_IRQ_HANDLER
+#define BOARD_SW_NAME BOARD_SW3_NAME
 
 #if gNvmTestActive_d
 
@@ -191,13 +200,28 @@ uint8_t gState;
 * \remarks
 *
 ********************************************************************************** */
+
+void BOARD_SW_IRQ_HANDLER(void)
+{
+ 	uint32_t irq_status = 0;
+
+ 	irq_status = GPIO_GetPinsInterruptFlags(GPIOC);
+    /* Clear external interrupt flag. */
+    GPIO_ClearPinsInterruptFlags(BOARD_SW_GPIO, irq_status);
+    /* Change state of button. */
+}
+
 void main_task(uint32_t param)
 {
     static uint8_t initialized = FALSE;
+    gpio_pin_config_t sw_config = {
+        kGPIO_DigitalInput, 0,
+    };
     
     if( !initialized )
     {
         initialized = TRUE;  
+        BOARD_InitPins();
         hardware_init();
         MEM_Init();
         TMR_Init();
@@ -207,6 +231,16 @@ void main_task(uint32_t param)
         Phy_Init();
         RNG_Init(); /* RNG must be initialized after the PHY is Initialized */
         MAC_Init();
+
+        PORT_SetPinInterruptConfig(BOARD_SW_PORT, BOARD_SW_GPIO_PIN, kPORT_InterruptFallingEdge);
+        EnableIRQ(BOARD_SW_IRQ);
+        GPIO_PinInit(BOARD_SW_GPIO, BOARD_SW_GPIO_PIN, &sw_config);
+
+        PORT_SetPinInterruptConfig(BOARD_SW4_PORT, BOARD_SW4_GPIO_PIN, kPORT_InterruptFallingEdge);
+        EnableIRQ(BOARD_SW4_IRQ);
+        GPIO_PinInit(BOARD_SW4_GPIO, BOARD_SW4_GPIO_PIN, &sw_config);
+        NVIC_SetPriority(BOARD_SW3_IRQ, 1);
+
 #if mEnterLowPowerWhenIdle_c
         PWR_Init();
         PWR_DisallowDeviceToSleep();
@@ -374,7 +408,6 @@ void AppThread(osaTaskParam_t argument)
     while(1)
     {
         OSA_EventWait(mAppEvent, osaEventFlagsAll_c, FALSE, osaWaitForever_c, &ev);
-
         if( !gUseRtos_c && !ev)
         {
             break;
@@ -1177,14 +1210,30 @@ static void App_HandleKeys
 {
 #if gKBD_KeysCount_c > 0 
     switch ( events ) 
-    { 
+    {
+    /*case 1:
+		Counter_change(3);
+    	break;
+    case 2:
+    	Counter_change(1);
+    	break;*/
+    case gKBD_EventSW1_c:
+		//Counter_change(3);
+    	//break;
+    case gKBD_EventSW2_c:
+    	//Counter_change(1);
+    	//break;
     case gKBD_EventLongSW1_c:
-        OSA_EventSet(mAppEvent, gAppEvtPressedRestoreNvmBut_c);
     case gKBD_EventLongSW2_c:
     case gKBD_EventLongSW3_c:
     case gKBD_EventLongSW4_c:
-    case gKBD_EventSW1_c:
-    case gKBD_EventSW2_c:
+        OSA_EventSet(mAppEvent, gAppEvtPressedRestoreNvmBut_c);
+        if(1 == events) {
+        	Counter_change(1);
+        }
+        else{
+        	Counter_change(3);
+        }
     case gKBD_EventSW3_c:
     case gKBD_EventSW4_c:
 #if gTsiSupported_d

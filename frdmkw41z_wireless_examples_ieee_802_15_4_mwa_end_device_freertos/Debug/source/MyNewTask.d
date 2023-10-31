@@ -19,7 +19,8 @@ source/MyNewTask.o source/MyNewTask.d: ../source/MyNewTask.c \
  D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\drivers/fsl_clock.h \
  D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\drivers/fsl_common.h \
  D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\OSAbstraction\Interface/fsl_os_abstraction.h \
- D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\OSAbstraction\Interface/fsl_os_abstraction_config.h
+ D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\OSAbstraction\Interface/fsl_os_abstraction_config.h \
+ D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\CMSIS/MKW41Z4.h
 D:/Proyects/REDES191023/frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos/source/app_preinclude.h:
 ../source/MyNewTask.h:
 D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\TimersManager\Interface/TimersManager.h:
@@ -41,3 +42,4 @@ D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device
 D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\drivers/fsl_common.h:
 D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\OSAbstraction\Interface/fsl_os_abstraction.h:
 D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\OSAbstraction\Interface/fsl_os_abstraction_config.h:
+D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\CMSIS/MKW41Z4.h:

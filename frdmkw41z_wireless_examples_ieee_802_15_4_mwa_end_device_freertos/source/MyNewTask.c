@@ -12,14 +12,17 @@ static uint8_t ledsState = 0;
 
 /* OSA Task Definition*/
 OSA_TASK_DEFINE(My_Task, gMyTaskPriority_c, 1, gMyTaskStackSize_c, FALSE );
-
-
+uint8_t led_count = 0;
+void Counter_change(uint8_t N)
+{
+	led_count = N--;
+}
 /* Main custom task */
 void My_Task(osaTaskParam_t argument)
 {
 	osaEventFlags_t customEvent;
 	myTimerID = TMR_AllocateTimer();
-	uint8_t led_count = 0;
+
 	while(1)
 	{
 		OSA_EventWait(mMyEvents, osaEventFlagsAll_c, FALSE, osaWaitForever_c, &customEvent);

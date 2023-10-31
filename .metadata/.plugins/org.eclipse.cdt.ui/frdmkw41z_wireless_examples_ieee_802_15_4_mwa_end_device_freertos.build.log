@@ -1,4 +1,4 @@
-18:36:48 **** Incremental Build of configuration Debug for project frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos ****
+12:30:57 **** Incremental Build of configuration Debug for project frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos ****
 make -r -j8 all 
 Building file: ../source/MyNewTask.c
 Invoking: MCU C Compiler
@@ -11,7 +11,7 @@ arm-none-eabi-gcc -L"D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_80
 Memory region         Used Size  Region Size  %age Used
     TEXT_region1:         192 B         1 KB     18.75%
 m_flash_config_region:          16 B         16 B    100.00%
-    TEXT_region2:      128943 B     513006 B     25.13%
+    TEXT_region2:      129947 B     513006 B     25.33%
       NVM_region:        8191 B       8191 B    100.00%
     DATA1_region:          0 GB        32 KB      0.00%
     DATA2_region:       20488 B        96 KB     20.84%
@@ -21,8 +21,8 @@ Finished building target: frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_devi
 Performing post-build steps
 arm-none-eabi-size "frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos.axf"; # arm-none-eabi-objcopy -v -O binary "frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos.axf" "frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos.bin" ; # checksum -p MKW41Z512xxx4 -d "frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos.bin";
    text	   data	    bss	    dec	    hex	filename
- 129124	   9759	  18928	 157811	  26873	frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos.axf
+ 130128	   9759	  18928	 158815	  26c5f	frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos.axf
  
 
-18:36:48 Build Finished. 0 errors, 0 warnings. (took 776ms)
+12:30:58 Build Finished. 0 errors, 0 warnings. (took 725ms)
 

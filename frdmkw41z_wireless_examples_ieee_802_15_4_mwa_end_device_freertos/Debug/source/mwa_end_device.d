@@ -29,6 +29,9 @@ source/mwa_end_device.o source/mwa_end_device.d: \
  D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\drivers/fsl_common.h \
  D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\OSAbstraction\Interface/fsl_os_abstraction.h \
  D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\OSAbstraction\Interface/fsl_os_abstraction_config.h \
+ D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\CMSIS/MKW41Z4.h \
+ D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\drivers/fsl_port.h \
+ D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\board/pin_mux.h \
  D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\LowPower\Interface\MKW41Z/PWR_Interface.h \
  D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\NVM\Interface/NVM_Interface.h \
  D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\ieee_802.15.4\phy\interface/PhyInterface.h \
@@ -68,6 +71,9 @@ D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device
 D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\drivers/fsl_common.h:
 D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\OSAbstraction\Interface/fsl_os_abstraction.h:
 D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\OSAbstraction\Interface/fsl_os_abstraction_config.h:
+D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\CMSIS/MKW41Z4.h:
+D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\drivers/fsl_port.h:
+D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\board/pin_mux.h:
 D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\LowPower\Interface\MKW41Z/PWR_Interface.h:
 D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\framework\NVM\Interface/NVM_Interface.h:
 D:\Proyects\REDES191023\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\ieee_802.15.4\phy\interface/PhyInterface.h:

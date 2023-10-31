@@ -37,6 +37,18 @@ BOARD_InitPins:
  *
  *END**************************************************************************/
 void BOARD_InitPins(void) {
+	  CLOCK_EnableClock(kCLOCK_PortC);                           /* Port C Clock Gate Control: Clock enabled */
+
+	  PORT_SetPinMux(PORTC, 1, kPORT_MuxAsGpio);          /* PORTC1 (pin 37) is configured as PTC1 */
+	  const port_pin_config_t portc4_pin40_config = {
+	    kPORT_PullUp,                                            /* Internal pull-up resistor is enabled */
+	    kPORT_SlowSlewRate,                                      /* Slow slew rate is configured */
+	    kPORT_PassiveFilterDisable,                              /* Passive filter is disabled */
+	    kPORT_LowDriveStrength,                                  /* Low drive strength is configured */
+	    kPORT_MuxAsGpio,                                         /* Pin is configured as PTC4 */
+	  };
+	  PORT_SetPinConfig(PORTC, 4, &portc4_pin40_config);  /* PORTC4 (pin 40) is configured as PTC4 */
+	  PORT_SetPinConfig(PORTC, 5, &portc4_pin40_config);
 }
 
 

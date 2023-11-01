@@ -1,6 +1,0 @@
-../source/MyNewTask.c:16:6:Counter_change	16	static
-../source/MyNewTask.c:21:6:My_Task	32	static
-../source/MyNewTask.c:87:6:MyTask_Init	8	static
-../source/MyNewTask.c:94:6:MyTaskTimer_Start	8	static
-../source/MyNewTask.c:100:13:myTaskTimerCallback	16	static
-../source/MyNewTask.c:106:6:MyTaskTimer_Stop	8	static

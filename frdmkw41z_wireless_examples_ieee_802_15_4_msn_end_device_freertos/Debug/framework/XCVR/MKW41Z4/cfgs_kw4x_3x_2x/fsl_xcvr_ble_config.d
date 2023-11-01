@@ -1,0 +1,27 @@
+framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_ble_config.o \
+ framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_ble_config.d: \
+ ../framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_ble_config.c \
+ D:/Proyects/testFritos/frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos/source/app_preinclude.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\framework\XCVR\MKW41Z4/fsl_xcvr.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/fsl_device_registers.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/MKW41Z4.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/core_cm0plus.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/core_cmInstr.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/cmsis_gcc.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/core_cmFunc.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/system_MKW41Z4.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/MKW41Z4_features.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\framework\XCVR\MKW41Z4/fsl_xcvr_trim.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\framework\XCVR\MKW41Z4/fsl_xcvr.h
+D:/Proyects/testFritos/frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos/source/app_preinclude.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\framework\XCVR\MKW41Z4/fsl_xcvr.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/fsl_device_registers.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/MKW41Z4.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/core_cm0plus.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/core_cmInstr.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/cmsis_gcc.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/core_cmFunc.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/system_MKW41Z4.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/MKW41Z4_features.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\framework\XCVR\MKW41Z4/fsl_xcvr_trim.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\framework\XCVR\MKW41Z4/fsl_xcvr.h:

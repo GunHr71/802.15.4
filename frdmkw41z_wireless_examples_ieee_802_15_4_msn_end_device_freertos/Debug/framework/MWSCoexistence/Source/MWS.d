@@ -1,0 +1,31 @@
+framework/MWSCoexistence/Source/MWS.o \
+ framework/MWSCoexistence/Source/MWS.d: \
+ ../framework/MWSCoexistence/Source/MWS.c \
+ D:/Proyects/testFritos/frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos/source/app_preinclude.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\framework\MWSCoexistence\Interface/MWS.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\framework\common/EmbeddedTypes.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\framework\OSAbstraction\Interface/fsl_os_abstraction.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\framework\OSAbstraction\Interface/fsl_os_abstraction_config.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\framework\GPIO/GPIO_Adapter.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/fsl_device_registers.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/MKW41Z4.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/core_cm0plus.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/core_cmInstr.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/cmsis_gcc.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/core_cmFunc.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/system_MKW41Z4.h \
+ D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/MKW41Z4_features.h
+D:/Proyects/testFritos/frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos/source/app_preinclude.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\framework\MWSCoexistence\Interface/MWS.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\framework\common/EmbeddedTypes.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\framework\OSAbstraction\Interface/fsl_os_abstraction.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\framework\OSAbstraction\Interface/fsl_os_abstraction_config.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\framework\GPIO/GPIO_Adapter.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/fsl_device_registers.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/MKW41Z4.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/core_cm0plus.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/core_cmInstr.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/cmsis_gcc.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/core_cmFunc.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/system_MKW41Z4.h:
+D:\Proyects\testFritos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_end_device_freertos\CMSIS/MKW41Z4_features.h:

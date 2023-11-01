@@ -1,0 +1,4 @@
+../source/Purger.c:31:7:Purger_Init	24	static
+../source/Purger.c:53:9:Purger_Track	32	static
+../source/Purger.c:90:9:Purger_Remove	24	static
+../source/Purger.c:122:9:Purger_Check	40	static

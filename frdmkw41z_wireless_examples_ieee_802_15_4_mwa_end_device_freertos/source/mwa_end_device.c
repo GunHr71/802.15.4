@@ -201,15 +201,6 @@ uint8_t gState;
 *
 ********************************************************************************** */
 
-void BOARD_SW_IRQ_HANDLER(void)
-{
- 	uint32_t irq_status = 0;
-
- 	irq_status = GPIO_GetPinsInterruptFlags(GPIOC);
-    /* Clear external interrupt flag. */
-    GPIO_ClearPinsInterruptFlags(BOARD_SW_GPIO, irq_status);
-    /* Change state of button. */
-}
 
 void main_task(uint32_t param)
 {
@@ -231,15 +222,6 @@ void main_task(uint32_t param)
         Phy_Init();
         RNG_Init(); /* RNG must be initialized after the PHY is Initialized */
         MAC_Init();
-
-        PORT_SetPinInterruptConfig(BOARD_SW_PORT, BOARD_SW_GPIO_PIN, kPORT_InterruptFallingEdge);
-        EnableIRQ(BOARD_SW_IRQ);
-        GPIO_PinInit(BOARD_SW_GPIO, BOARD_SW_GPIO_PIN, &sw_config);
-
-        PORT_SetPinInterruptConfig(BOARD_SW4_PORT, BOARD_SW4_GPIO_PIN, kPORT_InterruptFallingEdge);
-        EnableIRQ(BOARD_SW4_IRQ);
-        GPIO_PinInit(BOARD_SW4_GPIO, BOARD_SW4_GPIO_PIN, &sw_config);
-        NVIC_SetPriority(BOARD_SW3_IRQ, 1);
 
 #if mEnterLowPowerWhenIdle_c
         PWR_Init();
@@ -1211,18 +1193,8 @@ static void App_HandleKeys
 #if gKBD_KeysCount_c > 0 
     switch ( events ) 
     {
-    /*case 1:
-		Counter_change(3);
-    	break;
-    case 2:
-    	Counter_change(1);
-    	break;*/
     case gKBD_EventSW1_c:
-		//Counter_change(3);
-    	//break;
     case gKBD_EventSW2_c:
-    	//Counter_change(1);
-    	//break;
     case gKBD_EventLongSW1_c:
     case gKBD_EventLongSW2_c:
     case gKBD_EventLongSW3_c:

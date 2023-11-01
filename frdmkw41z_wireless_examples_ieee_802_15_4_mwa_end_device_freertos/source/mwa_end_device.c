@@ -1200,11 +1200,12 @@ static void App_HandleKeys
     case gKBD_EventLongSW3_c:
     case gKBD_EventLongSW4_c:
         OSA_EventSet(mAppEvent, gAppEvtPressedRestoreNvmBut_c);
-        if(1 == events) {
-        	Counter_change(1);
-        }
-        else{
+        if(1 == events) { //when you press sw 4
         	Counter_change(3);
+        }
+        else if(2 == events) //when you press sw 3
+		{
+        	Counter_change(1);
         }
     case gKBD_EventSW3_c:
     case gKBD_EventSW4_c:

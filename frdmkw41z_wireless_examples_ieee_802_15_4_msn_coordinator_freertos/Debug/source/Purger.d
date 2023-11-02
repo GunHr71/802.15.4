@@ -1,23 +1,23 @@
 source/Purger.o source/Purger.d: ../source/Purger.c \
- C:/Redes_Embebidos/frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos/source/app_preinclude.h \
+ C:/Redes_Embebidos/802_15_4/802_15_4/frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos/source/app_preinclude.h \
  ../source/Purger.h \
- C:\Redes_Embebidos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\framework\common/EmbeddedTypes.h \
- C:\Redes_Embebidos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\ieee_802.15.4\mac\interface/MacInterface.h \
- C:\Redes_Embebidos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\ieee_802.15.4\mac\interface/MacTypes.h \
- C:\Redes_Embebidos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\ieee_802.15.4\mac\interface/MacFunctionalityDefines.h \
- C:\Redes_Embebidos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\ieee_802.15.4\mac\interface/MacMessages.h \
- C:\Redes_Embebidos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\framework\MemManager\Interface/MemManager.h \
- C:\Redes_Embebidos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\framework\Lists/GenericList.h \
- C:\Redes_Embebidos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\framework\Messaging\Interface/Messaging.h \
- C:\Redes_Embebidos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\framework\SerialManager\Interface/SerialManager.h
-C:/Redes_Embebidos/frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos/source/app_preinclude.h:
+ C:\Redes_Embebidos\802_15_4\802_15_4\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\framework\common/EmbeddedTypes.h \
+ C:\Redes_Embebidos\802_15_4\802_15_4\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\ieee_802.15.4\mac\interface/MacInterface.h \
+ C:\Redes_Embebidos\802_15_4\802_15_4\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\ieee_802.15.4\mac\interface/MacTypes.h \
+ C:\Redes_Embebidos\802_15_4\802_15_4\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\ieee_802.15.4\mac\interface/MacFunctionalityDefines.h \
+ C:\Redes_Embebidos\802_15_4\802_15_4\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\ieee_802.15.4\mac\interface/MacMessages.h \
+ C:\Redes_Embebidos\802_15_4\802_15_4\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\framework\MemManager\Interface/MemManager.h \
+ C:\Redes_Embebidos\802_15_4\802_15_4\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\framework\Lists/GenericList.h \
+ C:\Redes_Embebidos\802_15_4\802_15_4\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\framework\Messaging\Interface/Messaging.h \
+ C:\Redes_Embebidos\802_15_4\802_15_4\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\framework\SerialManager\Interface/SerialManager.h
+C:/Redes_Embebidos/802_15_4/802_15_4/frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos/source/app_preinclude.h:
 ../source/Purger.h:
-C:\Redes_Embebidos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\framework\common/EmbeddedTypes.h:
-C:\Redes_Embebidos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\ieee_802.15.4\mac\interface/MacInterface.h:
-C:\Redes_Embebidos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\ieee_802.15.4\mac\interface/MacTypes.h:
-C:\Redes_Embebidos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\ieee_802.15.4\mac\interface/MacFunctionalityDefines.h:
-C:\Redes_Embebidos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\ieee_802.15.4\mac\interface/MacMessages.h:
-C:\Redes_Embebidos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\framework\MemManager\Interface/MemManager.h:
-C:\Redes_Embebidos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\framework\Lists/GenericList.h:
-C:\Redes_Embebidos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\framework\Messaging\Interface/Messaging.h:
-C:\Redes_Embebidos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\framework\SerialManager\Interface/SerialManager.h:
+C:\Redes_Embebidos\802_15_4\802_15_4\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\framework\common/EmbeddedTypes.h:
+C:\Redes_Embebidos\802_15_4\802_15_4\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\ieee_802.15.4\mac\interface/MacInterface.h:
+C:\Redes_Embebidos\802_15_4\802_15_4\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\ieee_802.15.4\mac\interface/MacTypes.h:
+C:\Redes_Embebidos\802_15_4\802_15_4\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\ieee_802.15.4\mac\interface/MacFunctionalityDefines.h:
+C:\Redes_Embebidos\802_15_4\802_15_4\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\ieee_802.15.4\mac\interface/MacMessages.h:
+C:\Redes_Embebidos\802_15_4\802_15_4\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\framework\MemManager\Interface/MemManager.h:
+C:\Redes_Embebidos\802_15_4\802_15_4\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\framework\Lists/GenericList.h:
+C:\Redes_Embebidos\802_15_4\802_15_4\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\framework\Messaging\Interface/Messaging.h:
+C:\Redes_Embebidos\802_15_4\802_15_4\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\framework\SerialManager\Interface/SerialManager.h:

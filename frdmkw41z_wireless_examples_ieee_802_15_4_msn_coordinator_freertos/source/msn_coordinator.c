@@ -156,6 +156,7 @@ static anchor_t mMlmeNwkInputQueue;
 static anchor_t mMcpsNwkInputQueue;
 
 static const uint64_t mExtendedAddress  = mMacExtendedAddress_c;
+static const uint64_t mExtendedAddress2  = mMacExtendedAddress2_c;
 static instanceId_t mMacInstance;
 static uint8_t mInterfaceId;
 osaEventId_t mAppEvent;
@@ -190,6 +191,18 @@ uint8_t gState;
 * \remarks
 *
 ********************************************************************************** */
+
+/*Crear estructura para nodos*/
+typedef struct
+{
+	uint16_t short_address; //short addres
+	uint64_t extended_address; //extended address
+	uint8_t RxOnWhenIdle; //true or false
+	macCapabilityInfo_tag DeviceType; //FFD or RFD
+
+}Node_t;
+
+Node_t nodes_array[5];
 void main_task(uint32_t param)
 {
     static uint8_t initialized = FALSE;
@@ -767,11 +780,13 @@ static uint8_t App_StartCoordinator(void)
 ******************************************************************************/
 static uint8_t App_SendAssociateResponse(nwkMessage_t *pMsgIn)
 {
+  static uint8_t devices_connected = 0;
   mlmeMessage_t *pMsg;
   mlmeAssociateRes_t *pAssocRes;
   uint8_t selectedAddress = 0x01;
+  uint8_t selectedAddress2 = 0x02;
   resultType_t requestResolution = gSuccess_c;
-
+  if(pMsgIn->msgData.associateInd.deviceAddress)
   if(mReservedAddress)
   {
     Serial_Print(mInterfaceId,"Busy associating another device. Ignoring MLME-Associate Indication.\n\r", gAllowToBlock_d);
@@ -781,6 +796,7 @@ static uint8_t App_SendAssociateResponse(nwkMessage_t *pMsgIn)
   Serial_Print(mInterfaceId,"Sending the MLME-Associate Response message to the MAC ", gAllowToBlock_d);
   /* Allocate a message for the MLME */
   pMsg = MSG_AllocType(mlmeMessage_t);
+
   if(pMsg != NULL)
   {
     /* This is a MLME-ASSOCIATE.res command */
@@ -788,22 +804,43 @@ static uint8_t App_SendAssociateResponse(nwkMessage_t *pMsgIn)
 
     /* Create the Associate response message data. */
     pAssocRes = &pMsg->msgData.associateRes;
-
     /* See if we still have space. */
     if(0x0F > mAddressesMap)
     {
-      /* We can assign 1, 2, 4 and 8 as a short address. Check the map and determine
-      the first free address. */
-      while((selectedAddress & mAddressesMap) != 0)
-      {
-        selectedAddress = selectedAddress << 1;
-      }
+    	if(devices_connected > 0)
+    	{
+			if(pMsgIn->msgData.associateInd.deviceAddress == nodes_array[devices_connected-1].extended_address)
+			{
+			      while((selectedAddress & mAddressesMap) != 0)
+			      {
+			        selectedAddress = selectedAddress2 << 1;
+			      }
 
-      pAssocRes->assocShortAddress = selectedAddress;
+			      pAssocRes->assocShortAddress = selectedAddress2;
+			      nodes_array[devices_connected].short_address = selectedAddress2;
+				  /* Association granted.*/
+				  requestResolution = gSuccess_c;
+			}
 
-      /* Association granted.*/      
-      requestResolution = gSuccess_c;
+
+    	}
+    	else
+    	{
+		  /* We can assign 1, 2, 4 and 8 as a short address. Check the map and determine
+		  the first free address. */
+		  while((selectedAddress & mAddressesMap) != 0)
+		  {
+			selectedAddress = selectedAddress << 1;
+		  }
+
+		  pAssocRes->assocShortAddress = selectedAddress;
+		  nodes_array[devices_connected].short_address = selectedAddress;
+
+		  /* Association granted.*/
+		  requestResolution = gSuccess_c;
+    	}
     }
+
     else
     {
       /* Signal that we do not have a valid short address. */
@@ -818,7 +855,15 @@ static uint8_t App_SendAssociateResponse(nwkMessage_t *pMsgIn)
     pAssocRes->securityLevel = gMacSecurityNone_c;
 
     /* Get the 64 bit address of the device requesting association. */
-    FLib_MemCpy(&pAssocRes->deviceAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
+    if(devices_connected == 1)
+    {
+    	nodes_array[devices_connected].extended_address = mExtendedAddress2;
+    }
+    else
+    {
+	FLib_MemCpy(&pAssocRes->deviceAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
+	nodes_array[devices_connected].extended_address = pMsgIn->msgData.associateInd.deviceAddress; //
+    }
 
     /* Send the Associate Response to the MLME. */
     if(NWK_MLME_SapHandler( pMsg, mMacInstance ) == gSuccess_c)
@@ -827,6 +872,17 @@ static uint8_t App_SendAssociateResponse(nwkMessage_t *pMsgIn)
       {
         mReservedAddress |= selectedAddress;
         Serial_Print(mInterfaceId,"Done.\n\r", gAllowToBlock_d);
+        nodes_array[devices_connected].RxOnWhenIdle = 1;
+        nodes_array[devices_connected].DeviceType = 0x02;
+        if(devices_connected == 0)
+        {
+      	  devices_connected++;
+        }
+        else
+        {
+      	  devices_connected = 1;
+        }
+
       }
       else
       {
@@ -847,6 +903,17 @@ static uint8_t App_SendAssociateResponse(nwkMessage_t *pMsgIn)
     Serial_Print(mInterfaceId,"Message allocation failed.\n\r", gAllowToBlock_d);
     return errorAllocFailed;
   }
+//  nodes_array[devices_connected].RxOnWhenIdle = 1;
+//  nodes_array[devices_connected].DeviceType = 0x02;
+//  if(devices_connected == 0)
+//  {
+//	  devices_connected++;
+//  }
+//  else
+//  {
+//	  devices_connected = 1;
+//  }
+
 }
 
 /******************************************************************************
@@ -885,6 +952,7 @@ static uint8_t App_HandleMlmeInput(nwkMessage_t *pMsg)
       Serial_Print(mInterfaceId,".\n\r", gAllowToBlock_d);
       mAddressesMap |= mReservedAddress;
       mReservedAddress = 0x00;
+
       App_UpdateLEDs();
       break;
       
@@ -950,7 +1018,7 @@ static void App_HandleMcpsInput(mcpsToNwkMessage_t *pMsgIn)
        */
       Serial_Print(mInterfaceId,"\n\rDevice address: ", gAllowToBlock_d);
       Serial_PrintHex(mInterfaceId,(uint8_t*)&pMsgIn->msgData.dataInd.srcAddr, 2, 0);
-      
+   //   pMsgIn->msgData.dataInd.srcAddr = nodes_array[0].short_address;
       if (pMsgIn->msgData.dataInd.pMsdu[0] == 0xFF)
       {
     	  uint8_t counter_received = pMsgIn->msgData.dataInd.pMsdu[1];

@@ -74,7 +74,7 @@ main-build: frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos.a
 frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos.axf: $(OBJS) $(USER_OBJS) makefile objects.mk $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -L"C:\Redes_Embebidos\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\libs" -Xlinker -Map="frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKW41Z512xxx4_connectivity.ld -L ../source -o "frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -L"C:\Redes_Embebidos\802_15_4\802_15_4\frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos\libs" -Xlinker -Map="frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKW41Z512xxx4_connectivity.ld -L ../source -o "frdmkw41z_wireless_examples_ieee_802_15_4_msn_coordinator_freertos.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

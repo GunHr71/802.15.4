@@ -21,6 +21,7 @@
 ************************************************************************************/
 
 #define mMacExtendedAddress_c    (0xFFFFFFFFFFFFFFFF)
+#define mMacExtendedAddress2_c   (0x1111111111111111)
 
 #ifdef gPHY_802_15_4g_d
 #define mDefaultValueOfChannel_c (0x0001FFFF)
